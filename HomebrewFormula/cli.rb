@@ -3,7 +3,7 @@ class Cli < Formula
   homepage "https://www.replicated.com/docs/reference/vendor-cli/"
   url "https://github.com/replicatedhq/replicated/releases/download/v0.5.0/replicated_0.5.0_darwin_amd64.tar.gz"
   version "0.5.0"
-  sha256 "9c50ce586635122919510639cc728ff36b1c8f163e5b39bd6cc82b1abb297070"
+  sha256 "a4cc27d626cfa97369a3a649df1f4251de1fb01d3ac87c6aa1755ea192e58fa1"
 
   def install
     bin.install "replicated"
