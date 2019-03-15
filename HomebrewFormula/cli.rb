@@ -2,9 +2,9 @@
 class Cli < Formula
   desc "Manage your app's channels and releases from the command line"
   homepage "https://www.replicated.com/docs/reference/vendor-cli/"
-  url "https://github.com/replicatedhq/replicated/releases/download/v0.6.0/replicated_0.6.0_darwin_amd64.tar.gz"
-  version "0.6.0"
-  sha256 "5e1a6d07567a3cda2b13ed78749d19001c9fac0dfe3843301973803ba54883f2"
+  url "https://github.com/replicatedhq/replicated/releases/download/v0.8.0/replicated_0.8.0_darwin_amd64.tar.gz"
+  version "0.8.0"
+  sha256 "89b5d6b8de3b40e8a3fc48e2a18aad6a7bb5193ea636c5e249476722b54ed625"
 
   def install
     bin.install "replicated"
