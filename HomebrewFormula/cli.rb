@@ -2,16 +2,16 @@
 class Cli < Formula
   desc "Manage your app's channels and releases from the command line"
   homepage "https://www.replicated.com/docs/reference/vendor-cli/"
-  version "0.22.0"
+  version "0.23.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/replicatedhq/replicated/releases/download/v0.22.0/replicated_0.22.0_darwin_amd64.tar.gz"
-    sha256 "eb6a70c751789151d27ebe53d7192891c653a76817b4bb548ba9612dc20b5b33"
+    url "https://github.com/replicatedhq/replicated/releases/download/v0.23.0/replicated_0.23.0_darwin_amd64.tar.gz"
+    sha256 "b27f4dfa47055d645fda9dbe09f2354eef809c97527855f85ec618be34430c8a"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/replicatedhq/replicated/releases/download/v0.22.0/replicated_0.22.0_linux_amd64.tar.gz"
-      sha256 "44b18f93d14e0b0bf65b9dfdc38b28ba02316ffb14ded55287d894a5a7e558cf"
+      url "https://github.com/replicatedhq/replicated/releases/download/v0.23.0/replicated_0.23.0_linux_amd64.tar.gz"
+      sha256 "bb1998bd362dad0f6e150070656b4642528668a4c63a5f7cd6792beaca8e4799"
     end
   end
 
