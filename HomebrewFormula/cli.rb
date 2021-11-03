@@ -3,7 +3,6 @@ class Cli < Formula
   desc "Manage your app's channels and releases from the command line"
   homepage "https://www.replicated.com/docs/reference/vendor-cli/"
   version "0.37.2"
-  bottle :unneeded
 
   if OS.mac?
     url "https://github.com/replicatedhq/replicated/releases/download/v0.37.2/replicated_0.37.2_darwin_amd64.tar.gz"
