@@ -8,14 +8,12 @@ class Cli < Formula
   version "0.39.3"
 
   on_macos do
-    if Hardware::CPU.intel?
       url "https://github.com/replicatedhq/replicated/releases/download/v0.39.3/replicated_0.39.3_darwin_amd64.tar.gz"
       sha256 "9c924d8fb9967a7ef81b23573294174d7a53f390ba4f8bdecb4341b33c0b32c6"
 
       def install
         bin.install "replicated"
       end
-    end
   end
 
   on_linux do
