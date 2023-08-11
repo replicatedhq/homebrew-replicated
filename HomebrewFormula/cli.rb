@@ -5,11 +5,11 @@
 class Cli < Formula
   desc "Package Replicated applications and manage releases, channels, customers and entitlements using a command-line interface."
   homepage "https://docs.replicated.com/reference/replicated-cli-installing"
-  version "0.54.0"
+  version "0.55.0"
 
   on_macos do
-    url "https://github.com/replicatedhq/replicated/releases/download/v0.54.0/replicated_0.54.0_darwin_all.tar.gz"
-    sha256 "19aa62d978e41202f186627218a0874b062cd6ebc6ffc399a24417e4d213c9f6"
+    url "https://github.com/replicatedhq/replicated/releases/download/v0.55.0/replicated_0.55.0_darwin_all.tar.gz"
+    sha256 "8b5bfbdd5155fd4cde755645138819686e43f8a5dbf7652441697366d6e55b5c"
 
     def install
       bin.install "replicated"
@@ -18,8 +18,8 @@ class Cli < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/replicatedhq/replicated/releases/download/v0.54.0/replicated_0.54.0_linux_amd64.tar.gz"
-      sha256 "5a8b94496fdbe2e82227d0f84ce180e5b2b716734d4df7e68ec1ae1ad86d77f1"
+      url "https://github.com/replicatedhq/replicated/releases/download/v0.55.0/replicated_0.55.0_linux_amd64.tar.gz"
+      sha256 "c858e6c7e31745c882c1b2fdcd73e8bb5bf929a4996383d7a98156adab353699"
 
       def install
         bin.install "replicated"
