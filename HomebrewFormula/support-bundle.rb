@@ -5,45 +5,35 @@
 class SupportBundle < Formula
   desc "Collect and redact support bundles for Kubernetes clusters."
   homepage "https://docs.replicated.com/reference/support-bundle-overview/"
-  version "0.123.4"
+  version "0.123.5"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/replicatedhq/troubleshoot/releases/download/v0.123.4/support-bundle_darwin_amd64.tar.gz"
-      sha256 "2406844beaf4d4cc6770c6910366e72f271d23f52ca004ee33f68b8633456469"
+    url "https://github.com/replicatedhq/troubleshoot/releases/download/v0.123.5/support-bundle_darwin_all.tar.gz"
+    sha256 "a54dacc2dd7fad2ff0ef8edd46b7f84b2147ca5ee9359ce49f347c2f1dfdd9dd"
 
-      def install
-        bin.install "support-bundle"
-      end
-    end
-    if Hardware::CPU.arm?
-      url "https://github.com/replicatedhq/troubleshoot/releases/download/v0.123.4/support-bundle_darwin_arm64.tar.gz"
-      sha256 "5a4cdccf77335046158f84c449369d7b74e42cdcb5a912d0baf5f46273cf613e"
-
-      def install
-        bin.install "support-bundle"
-      end
+    def install
+      bin.install "support-bundle"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/replicatedhq/troubleshoot/releases/download/v0.123.4/support-bundle_linux_amd64.tar.gz"
-      sha256 "cab0dd7be68a7d38c23d6d27fe6a3ffeb01d3bebe1c96a7cfdc3a9767df63a2d"
+      url "https://github.com/replicatedhq/troubleshoot/releases/download/v0.123.5/support-bundle_linux_amd64.tar.gz"
+      sha256 "754bb523872bf09cc427129f4508753ed629174d69cf86fe8d617888d66358e8"
       def install
         bin.install "support-bundle"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/replicatedhq/troubleshoot/releases/download/v0.123.4/support-bundle_linux_arm.tar.gz"
-      sha256 "b3d4f23497861cc0d55034d05fac07b278019871f0086661b0e1e0fcaffdeaa4"
+      url "https://github.com/replicatedhq/troubleshoot/releases/download/v0.123.5/support-bundle_linux_arm.tar.gz"
+      sha256 "f72e5a2c1aa6d839cb50295b7168a0b6dcebe70749920011dc1daba06bd7af73"
       def install
         bin.install "support-bundle"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/replicatedhq/troubleshoot/releases/download/v0.123.4/support-bundle_linux_arm64.tar.gz"
-      sha256 "0b7166c64488cd4301dc658d97d79c9be362d0cee8f14934413659ad61482945"
+      url "https://github.com/replicatedhq/troubleshoot/releases/download/v0.123.5/support-bundle_linux_arm64.tar.gz"
+      sha256 "7f827cc7c9a1cf8e503321db080b16964f539140f3ea86b099e0c6f1c9b4ca1c"
       def install
         bin.install "support-bundle"
       end
