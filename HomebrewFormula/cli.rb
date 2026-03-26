@@ -5,29 +5,29 @@
 class Cli < Formula
   desc "Package Replicated applications and manage releases, channels, customers and entitlements using a command-line interface."
   homepage "https://docs.replicated.com/reference/replicated-cli-installing"
-  version "0.124.3"
+  version "0.124.4"
 
   on_macos do
-    url "https://github.com/replicatedhq/replicated/releases/download/v0.124.3/replicated_0.124.3_darwin_all.tar.gz"
-    sha256 "11dc31b8caf771eabd1b6c008945e94ee2af5bebaa74692416ac6d74bccc8f0a"
+    url "https://github.com/replicatedhq/replicated/releases/download/v0.124.4/replicated_0.124.4_darwin_all.tar.gz"
+    sha256 "2a7bab24c781c4ebdc8e427f6304dcf218a8caa76f11abf34fba0385dfe328ca"
 
-    def install
+    define_method(:install) do
       bin.install "replicated"
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/replicatedhq/replicated/releases/download/v0.124.3/replicated_0.124.3_linux_amd64.tar.gz"
-      sha256 "1653f492a091f6f633abbb940b0d6609403e01b5ac6fc4255e21aedddc3eb933"
-      def install
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/replicatedhq/replicated/releases/download/v0.124.4/replicated_0.124.4_linux_amd64.tar.gz"
+      sha256 "eca070923ab79b948e514b3d29899ad47da8c9467e4986c03e635dae47cd4652"
+      define_method(:install) do
         bin.install "replicated"
       end
     end
-    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/replicatedhq/replicated/releases/download/v0.124.3/replicated_0.124.3_linux_arm64.tar.gz"
-      sha256 "8528d2ae0f3b742e34a13847f65fe7edadf1a8d33b00b6b52416cc0e868d544e"
-      def install
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/replicatedhq/replicated/releases/download/v0.124.4/replicated_0.124.4_linux_arm64.tar.gz"
+      sha256 "b828cdbb74e4104fefe4841260df97a83a72c30da4cc99c8939c90b7dcf0a78e"
+      define_method(:install) do
         bin.install "replicated"
       end
     end
