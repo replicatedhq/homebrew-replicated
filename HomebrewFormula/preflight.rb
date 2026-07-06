@@ -5,11 +5,11 @@
 class Preflight < Formula
   desc "A preflight checker and conformance test for Kubernetes clusters."
   homepage "https://docs.replicated.com/reference/preflight-overview/"
-  version "0.130.0"
+  version "0.130.1"
 
   on_macos do
-    url "https://github.com/replicatedhq/troubleshoot/releases/download/v0.130.0/preflight_darwin_all.tar.gz"
-    sha256 "4faf564d0dda1ad915a4d867dad49ab4a93c50e868ad44a21e495163c0aa24ce"
+    url "https://github.com/replicatedhq/troubleshoot/releases/download/v0.130.1/preflight_darwin_all.tar.gz"
+    sha256 "e2283c8214026e7a91d9e0619b8446e6ffe5772b64aeec7b2520382345560ae2"
 
     def install
       bin.install "preflight"
@@ -18,22 +18,22 @@ class Preflight < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/replicatedhq/troubleshoot/releases/download/v0.130.0/preflight_linux_amd64.tar.gz"
-      sha256 "735c77850c28a33b32556b168fa1ef80e5eed66eaf2ae5855d58cea1f26d8a24"
+      url "https://github.com/replicatedhq/troubleshoot/releases/download/v0.130.1/preflight_linux_amd64.tar.gz"
+      sha256 "f5005319d09e61698b33f194c362e8501982bf4f0dff11278192a04a01add51a"
       def install
         bin.install "preflight"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/replicatedhq/troubleshoot/releases/download/v0.130.0/preflight_linux_arm.tar.gz"
-      sha256 "edac683c22a6e7e5cb37d794199a80e4a98af115aecb643197033ac1b65b6ed3"
+      url "https://github.com/replicatedhq/troubleshoot/releases/download/v0.130.1/preflight_linux_arm.tar.gz"
+      sha256 "84732add2554a3f49cd77bd82982f476192c7ddbf756cf6b5eeb16e1a7575402"
       def install
         bin.install "preflight"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/replicatedhq/troubleshoot/releases/download/v0.130.0/preflight_linux_arm64.tar.gz"
-      sha256 "f301b6eeada42ea7ed41f0d33227f86628d6153003d057e7d0400bb7ebb79f25"
+      url "https://github.com/replicatedhq/troubleshoot/releases/download/v0.130.1/preflight_linux_arm64.tar.gz"
+      sha256 "5804fe99e2d71b4a79c267180f11d2c18418048dd470495ed8064b0e5ae68bab"
       def install
         bin.install "preflight"
       end
