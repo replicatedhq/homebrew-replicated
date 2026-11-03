@@ -9,7 +9,7 @@ class Cli < Formula
 
   on_macos do
     url "https://github.com/replicatedhq/replicated/releases/download/v0.129.16/replicated_0.129.16_darwin_all.tar.gz"
-    sha256 "b6c11a7267c439a1a37e19391e5a7ac2ee91716902792de2df9a5f9fb849f5df"
+    sha256 "78e7c86ec1d78740cd2e0fabfc92944f101aac0b2b90ea93c36a2d3a8185bcc2"
 
     define_method(:install) do
       bin.install "replicated"
@@ -19,14 +19,14 @@ class Cli < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/replicatedhq/replicated/releases/download/v0.129.16/replicated_0.129.16_linux_amd64.tar.gz"
-      sha256 "7ea2f86d1496229c581430110d6edac8c18c8c6bc0633648368cff2dc3894d99"
+      sha256 "3af738be1ee5e41b9e014399459348c217b38f152cde15ebe0c35ba3c180fd46"
       define_method(:install) do
         bin.install "replicated"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/replicatedhq/replicated/releases/download/v0.129.16/replicated_0.129.16_linux_arm64.tar.gz"
-      sha256 "38b3b53364f73ab6a172ef5393915061fc28138359835662720f1f8f4822c7d6"
+      sha256 "422317c648f419f0bbb8206a24bad976cd11777e9ec92394ed54436d62311cad"
       define_method(:install) do
         bin.install "replicated"
       end
